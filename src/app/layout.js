@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,16 +14,19 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "BCD a Exceso-3 | Máquina de Moore",
-  description: "Máquina de Moore para convertir BCD a Exceso-3'",
+  description: "Máquina de Moore para convertir BCD a Exceso-3",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen full-h bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-gray-50`}
       >
-        {children}
+        <Navbar />
+        <main className="flex-grow flex flex-col bg-white">
+          {children}
+        </main>
       </body>
     </html>
   );

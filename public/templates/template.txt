@@ -1,0 +1,17 @@
+Conjunto de Estados Q:
+q0, q1, q2, q3
+
+Alfabeto de Entrada Σ:
+a, b
+
+Alfabeto de Salida Γ:
+0, 1
+
+Estado Inicial qo:
+q0
+
+Tabla de Transición:
+q0, 0, q1, q3
+q1, 1, q0, q2
+q2, 0, q3, q2
+q3, 1, q1, q0

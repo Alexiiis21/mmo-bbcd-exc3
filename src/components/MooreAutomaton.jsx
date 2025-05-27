@@ -34,17 +34,6 @@ export default function MooreAutomaton() {
                 {getCurrentStateDisplay()}
               </span>
             </p>
-            <p className="font-semibold flex items-center">
-              <span className="text-gray-700 w-32">Secuencia de entrada:</span>
-              <span className="ml-2 font-mono">
-                {inputSequence.length > 0 ? 
-                  inputSequence.map((bit, i) => (
-                    <span key={i} className={`inline-block px-2 py-1 m-0.5 rounded text-gray-700 ${bit === '#' ? 'bg-yellow-100' : 'bg-gray-100'}`}>{bit}</span>
-                  )) : 
-                  <span className="text-gray-500 italic">Vacía</span>
-                }
-              </span>
-            </p>
           </div>
         </div>
         <div className="bg-white rounded-lg p-4 shadow-inner">
